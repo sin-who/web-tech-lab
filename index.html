@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Technology Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f9;
+        }
+
+        header {
+            background: #1e3a8a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #2563eb;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 25px;
+            background: white;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #999;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        form input, form button {
+            padding: 8px;
+            margin: 6px 0;
+            width: 100%;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1e40af;
+        }
+
+        footer {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #eef2ff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Web Technology Lab Demonstration</h1>
+    <p>HTML • CSS • JavaScript • Forms • DOM</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#table">Table</a>
+    <a href="#form">Form</a>
+    <a href="#js">JavaScript</a>
+</nav>
+
+<section id="about">
+    <h2>About</h2>
+    <p>
+        This webpage demonstrates the concepts learned in the Web Technology laboratory.
+        It includes HTML structure, CSS styling, JavaScript interactivity, form handling,
+        and dynamic content updates.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills Learned</h2>
+    <ul>
+        <li>HTML structure and semantic tags</li>
+        <li>CSS styling and layouts</li>
+        <li>JavaScript basics and DOM manipulation</li>
+        <li>Form handling and validation</li>
+        <li>Interactive web page design</li>
+    </ul>
+</section>
+
+<section id="table">
+    <h2>Sample Table</h2>
+    <table>
+        <tr>
+            <th>Technology</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Structure of web pages</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Styling and layout</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Interactivity and logic</td>
+        </tr>
+    </table>
+</section>
+
+<section id="form">
+    <h2>Contact Form (Validation Demo)</h2>
+
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="email" id="email" placeholder="Enter your email">
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="message"></p>
+</section>
+
+<section id="js">
+    <h2>JavaScript Interaction</h2>
+
+    <div class="card">
+        <p id="text">Click the button to change this text.</p>
+        <button onclick="changeText()">Click Me</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Web Technology Lab | Student Portfolio</p>
+</footer>
+
+<script>
+    function changeText() {
+        document.getElementById("text").innerHTML =
+            "Text changed using JavaScript DOM manipulation!";
+    }
+
+    function validateForm() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+
+        if (name === "" || email === "") {
+            alert("Please fill all fields!");
+            return false;
+        }
+
+        document.getElementById("message").innerHTML =
+            "Form submitted successfully!";
+        return false;
+    }
+</script>
+
+</body>
+</html>
